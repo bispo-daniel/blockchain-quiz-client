@@ -1,31 +1,16 @@
-<div class="w-full h-screen bg-white relative overflow-hidden flex flex-col items-center justify-center px-6 py-12 text-black">
-  <!-- Grade de circuito ao fundo -->
-  <div class="absolute inset-0 opacity-10 pointer-events-none select-none bg-[url('/assets/images/bg-circuit.svg')] bg-cover bg-center"></div>
+<div
+  class="w-full h-screen bg-white relative overflow-hidden flex flex-col items-center justify-center px-6 py-12 text-black">
+  <h2 class="font-[Modak] text-gray-900 text-3xl sm:text-4xl text-center select-none">
+    <span class="text-[#5D50A2] hover:underline">Blockchain</span> vai além de criptomoedas
+  </h2>
 
-  <h2 class="text-4xl font-bold text-center z-10">Aplicações Reais</h2>
-  <p class="text-center text-lg text-gray-600 mt-2 z-10 italic">Blockchain vai além de criptomoedas</p>
+  <div class="flex gap-6 mt-10 z-10">
+    <app-card *ngFor="let item of pyramidTop" [title]="item.title" [content]="item.content">
+    </app-card>
+  </div>
 
-  <!-- Cards pictográficos -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 z-10">
-    <div class="group bg-white/70 backdrop-blur border border-gray-200 p-6 rounded-xl shadow-md hover:shadow-xl transition">
-      <h3 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition">✔️ Criptomoedas</h3>
-      <p class="text-gray-700 text-sm">Pagamentos descentralizados e sem intermediários.</p>
-    </div>
-    <div class="group bg-white/70 backdrop-blur border border-gray-200 p-6 rounded-xl shadow-md hover:shadow-xl transition">
-      <h3 class="text-xl font-semibold mb-2 group-hover:text-red-500 transition">✔️ Contratos Inteligentes</h3>
-      <p class="text-gray-700 text-sm">Automatizam acordos sem burocracia.</p>
-    </div>
-    <div class="group bg-white/70 backdrop-blur border border-gray-200 p-6 rounded-xl shadow-md hover:shadow-xl transition">
-      <h3 class="text-xl font-semibold mb-2 group-hover:text-green-500 transition">✔️ Votação Digital</h3>
-      <p class="text-gray-700 text-sm">Transparência e segurança nas eleições.</p>
-    </div>
-    <div class="group bg-white/70 backdrop-blur border border-gray-200 p-6 rounded-xl shadow-md hover:shadow-xl transition">
-      <h3 class="text-xl font-semibold mb-2 group-hover:text-orange-500 transition">✔️ Cadeias de Suprimentos</h3>
-      <p class="text-gray-700 text-sm">Rastreabilidade de ponta a ponta.</p>
-    </div>
-    <div class="group bg-white/70 backdrop-blur border border-gray-200 p-6 rounded-xl shadow-md hover:shadow-xl transition">
-      <h3 class="text-xl font-semibold mb-2 group-hover:text-purple-600 transition">✔️ Registros Médicos</h3>
-      <p class="text-gray-700 text-sm">Históricos seguros e imutáveis.</p>
-    </div>
+  <div class="flex gap-6 mt-10 z-10">
+    <app-card *ngFor="let item of pyramidBottom" [title]="item.title" [content]="item.content">
+    </app-card>
   </div>
 </div>

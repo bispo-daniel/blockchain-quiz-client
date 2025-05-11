@@ -1,33 +1,16 @@
 <div
-  class="w-full h-screen bg-white flex flex-col items-center justify-center px-8 py-12 relative text-black overflow-hidden">
-  <!-- Background decorativo de fusão tech -->
-  <div
-    class="absolute inset-0 opacity-10 bg-[url('/assets/images/bg-tech-fusion.svg')] bg-cover bg-center pointer-events-none">
-  </div>
+  class="w-full h-screen bg-white flex flex-col items-center justify-center px-8 py-12 relative text-black overflow-hidden select-none">
+  <h2 class="font-[Modak] text-gray-900 text-3xl sm:text-4xl text-center z-10">
+    <span class="text-[#6899CD] hover:underline">Blockchain</span> encontra tecnologias emergentes
+  </h2>
 
-  <h2 class="text-4xl font-bold text-center z-10">Integrações Emergentes</h2>
-  <p class="text-lg text-center text-gray-600 max-w-2xl mt-4 z-10">
-    A fusão do blockchain com tecnologias emergentes está <span class="text-blue-600 font-semibold">redefinindo</span> o
+  <p class="text-base text-gray-600 leading-relaxed font-[Roboto] text-center select-none">
+    A união com IA, IoT e Big Data está <span class="font-semibold hover:underline">redefinindo</span> o
     mundo digital.
   </p>
 
-  <!-- Ícones representando a união -->
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-12 z-10">
-    <div class="flex flex-col items-center gap-2">
-      <img src="assets/icons/ai.svg" class="w-12 h-12" alt="AI" />
-      <span class="text-sm text-gray-700">Inteligência Artificial</span>
-    </div>
-    <div class="flex flex-col items-center gap-2">
-      <img src="assets/icons/iot.svg" class="w-12 h-12" alt="IoT" />
-      <span class="text-sm text-gray-700">Internet das Coisas</span>
-    </div>
-    <div class="flex flex-col items-center gap-2">
-      <img src="assets/icons/big-data.svg" class="w-12 h-12" alt="Big Data" />
-      <span class="text-sm text-gray-700">Big Data</span>
-    </div>
-    <div class="flex flex-col items-center gap-2">
-      <img src="assets/icons/cube.svg" class="w-12 h-12" alt="Blockchain" />
-      <span class="text-sm text-gray-700">Blockchain</span>
-    </div>
+    <app-image-card *ngFor="let item of images" [imageUrl]="item.imageUrl" [title]="item.title"
+      [gap]="2"></app-image-card>
   </div>
 </div>

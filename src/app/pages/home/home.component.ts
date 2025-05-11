@@ -26,8 +26,8 @@ export class HomeComponent {
     HowItWorksSlideComponent,
     RealWorldSlideComponent,
     TypesConsensusSlideComponent,
-    FutureSlideComponent,
     EmergingIntegrationSlideComponent,
+    FutureSlideComponent,
     StudySlideComponent,
     QuizCallSlideComponent,
   ];

@@ -1,33 +1,37 @@
-<div class="w-full h-screen bg-white flex flex-col items-center justify-center px-8 py-12 text-black relative">
-  <h2 class="text-4xl font-bold text-center mb-8">Tipos & Consensos</h2>
-  <p class="text-gray-600 text-center mb-12 max-w-xl italic">Há diferentes formas e regras na tecnologia blockchain</p>
+<div
+  class="w-full h-screen bg-white flex flex-col items-center justify-center px-8 py-12 text-black relative select-none">
+  <h2 class="font-[Modak] text-gray-900 text-3xl sm:text-4xl text-center select-none mb-8">
+    Existem tipos diferentes de <span class="text-[#F7D03B] hover:underline">blockchain</span>
+  </h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-6xl z-10">
-    <!-- Tipos -->
-    <div class="flex flex-col gap-4 items-start">
-      <h3 class="text-xl font-semibold border-b border-black pb-1">🏛️ Tipos de Blockchain</h3>
-      <ul class="flex flex-col gap-2 pl-2 text-gray-800">
-        <li>🔓 <strong>Público</strong> – acesso aberto (ex: Bitcoin)</li>
-        <li>🔒 <strong>Privado</strong> – controlado por entidade única</li>
-        <li>⚖️ <strong>Híbrido</strong> – combina abertura e controle</li>
-        <li>🤝 <strong>Consórcio</strong> – governado por várias organizações</li>
-      </ul>
+  <div class="w-full max-w-[750px] z-10 border rounded-4xl border-gray-200 p-3 transition-all hover:scale-105">
+    <div class="flex gap-6 w-full">
+
+      <!-- Tipos -->
+      <div class="flex flex-col gap-4 items-start p-4 flex-1">
+        <h3 class="text-xl font-semibold pb-1 hover:underline">Tipos de Blockchain</h3>
+        <ul class="flex flex-col gap-2 pl-2 text-gray-800">
+          <li class="text-sm"><span class="font-semibold">Público</span> – acesso aberto (ex: Bitcoin)</li>
+          <li class="text-sm"><span class="font-semibold">Privado</span> – controlado por entidade única</li>
+          <li class="text-sm"><span class="font-semibold">Híbrido</span> – combina abertura e controle</li>
+          <li class="text-sm"><span class="font-semibold">Consórcio</span> – governado por várias organizações</li>
+        </ul>
+      </div>
+
+      <!-- Separador -->
+      <div class="h-auto w-[1px] bg-gray-200"></div>
+
+      <!-- Consensos -->
+      <div class="flex flex-col gap-4 items-start p-4 flex-1">
+        <h3 class="text-xl font-semibold pb-1 hover:underline">Mecanismos de Consenso</h3>
+        <ul class="flex flex-col gap-2 pl-2 text-gray-800">
+          <li class="text-sm"><span class="font-semibold">PoW</span> – Prova de Trabalho (ex: Bitcoin)</li>
+          <li class="text-sm"><span class="font-semibold">PoS</span> – Prova de Participação (ex: Ethereum 2.0)</li>
+          <li class="text-sm"><span class="font-semibold">BFT</span> – Tolerância a Falhas Bizantinas</li>
+          <li class="text-sm"><span class="font-semibold">PoA</span> – Prova de Autoridade (ex: redes privadas)</li>
+        </ul>
+      </div>
+
     </div>
-
-    <!-- Consensos -->
-    <div class="flex flex-col gap-4 items-start">
-      <h3 class="text-xl font-semibold border-b border-black pb-1">⚙️ Mecanismos de Consenso</h3>
-      <ul class="flex flex-col gap-2 pl-2 text-gray-800">
-        <li>⛏️ <strong>PoW</strong> – Prova de Trabalho (ex: Bitcoin)</li>
-        <li>🪙 <strong>PoS</strong> – Prova de Participação (ex: Ethereum 2.0)</li>
-        <li>🛡️ <strong>BFT</strong> – Tolerância a Falhas Bizantinas</li>
-        <li>👤 <strong>PoA</strong> – Prova de Autoridade (ex: redes privadas)</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Esquema decorativo ao fundo (opcional) -->
-  <div
-    class="absolute inset-0 opacity-5 bg-[url('/assets/images/bg-nodes.svg')] bg-center bg-contain bg-no-repeat pointer-events-none">
   </div>
 </div>
