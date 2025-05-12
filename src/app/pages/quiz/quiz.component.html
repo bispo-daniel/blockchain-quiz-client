@@ -1,1 +1,34 @@
-<p>quiz works!</p>
+<swiper-container #mainSwiper direction="vertical" slides-per-view="1" speed="900" mousewheel="true" navigation="false"
+  keyboard="true" draggable="false" class="w-full h-screen text-white">
+  <ng-container *ngFor="let q of questions; let i = index">
+    <swiper-slide class="flex flex-col items-center justify-between bg-slate-950 py-8 select-none">
+      <div class="w-full flex justify-center">
+        <p class="font-[Roboto] text-gray-200 text-lg w-fit select-none hover:underline hover:cursor-pointer">
+          {{ q.question }}
+        </p>
+      </div>
+
+      <div class="flex-1 flex flex-col justify-center">
+        <swiper-container effect="cards" grab-cursor="true" class="mySwiper w-60 h-80">
+          <ng-container *ngFor="let opt of q.options; let j = index">
+            <swiper-slide class="flex items-center justify-center rounded-4xl px-4 select-none hover:cursor-pointer"
+              (click)="choose(i, j)" [class.bg-[#467966]]="picked[i] === j" [class.bg-[#F4BE23]]="picked[i] !== j">
+              <span class="hover:underline font-semibold text-gray-200 text-center">{{ opt }}</span>
+            </swiper-slide>
+          </ng-container>
+        </swiper-container>
+      </div>
+    </swiper-slide>
+  </ng-container>
+
+  <swiper-slide *ngIf="questions.length" class="flex flex-col items-center justify-center gap-8 bg-black p-10">
+    <h2 class="text-5xl font-bold">
+      Você fez {{ score }} / {{ questions.length }}!
+    </h2>
+
+    <button routerLink="/"
+      class="px-8 py-3 bg-cyan-400 text-black text-lg font-semibold rounded-full hover:bg-cyan-300 transition-all">
+      Voltar ao início
+    </button>
+  </swiper-slide>
+</swiper-container>
